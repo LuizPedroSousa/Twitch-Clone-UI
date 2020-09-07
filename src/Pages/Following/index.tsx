@@ -7,6 +7,7 @@ import Heading from './../../Components/Heading/index';
 import Title from './../../Components/Title/index';
 import CategoryList from './../../Components/CategoryList/index';
 import StreamList from './../../Components/StreamList/index';
+import OffChannelsList from './../../Components/OffChannelsList';
 interface Item {
   key: string;
   render: () => JSX.Element;
@@ -39,6 +40,10 @@ const Following: React.FC = () => {
         key: 'Offiline_Chanels',
         render: () => <Title>CANAIS OFFILINE</Title>,
         isTitle: true,
+      },
+      {
+        key: 'C3',
+        render: () => <OffChannelsList />
       }
     ]
 

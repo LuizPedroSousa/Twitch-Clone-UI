@@ -44,7 +44,7 @@ export const Description = styled.Text`
 `;
 export const Category = styled.Text`
     color: ${props => props.theme.colors.gray};
-    margin: 4px 0 4px;
+    margin: 4px 0 8px;
 `;
 export const Language = styled.Text`
     color: ${props => props.theme.colors.black};

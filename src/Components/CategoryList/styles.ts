@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-
+import { shade } from 'polished';
 
 export const List = styled.ScrollView.attrs({
     horizontal: true,
@@ -41,7 +41,7 @@ export const RedCircle = styled.View`
 `;
 
 export const Views = styled.Text`
-    color: ${props => props.theme.colors.gray};
+    color: ${props => shade(0.1, props.theme.colors.black)};
     font-family: Roboto_400Regular;
     font-size: 12px;
 `;
