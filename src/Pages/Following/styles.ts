@@ -18,5 +18,6 @@ export const Container = styled.View`
     margin: 0 14px;
 `;
 export const Main = styled.View`
+    flex: 1;
 `;
 

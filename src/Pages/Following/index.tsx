@@ -63,6 +63,8 @@ const Following: React.FC = () => {
         <Header />
         <Main>
           <FlatList<Item>
+            showsVerticalScrollIndicator={false}
+            showsHorizontalScrollIndicator={false}
             data={data}
             renderItem={({ item }) => item.render()}
             keyExtractor={(item) => item.key}

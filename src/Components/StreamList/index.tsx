@@ -18,13 +18,21 @@ import {
   Name,
 } from './styles';
 
+import * as animatable from 'react-native-animatable';
+
 interface StreamProps {
   item: typeof thumb[0];
 }
 const StreamList: React.FC = () => {
   const StreamItem: React.FC<StreamProps> = ({ item }) => {
+    const StreamContainerAnim = animatable
+      .createAnimatableComponent(StreamContainer);
     return (
-      <StreamContainer>
+      <StreamContainerAnim
+        useNativeDriver
+        animation='zoomIn'
+        duration={3500}
+      >
         <Thumbnail source={item.source}>
           <Status>
             <Views >{item.views}</Views>
@@ -48,11 +56,13 @@ const StreamList: React.FC = () => {
             {item.language}
           </Language>
         </StreamColum>
-      </StreamContainer>
+      </StreamContainerAnim>
     );
   }
   return (
-    <List>
+    <List
+      showsVerticalScrollIndicator={false}
+    >
       {thumb.map(item => {
         return (
           <StreamItem key={item.name} item={item} />

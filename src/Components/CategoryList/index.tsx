@@ -36,7 +36,9 @@ const CategoryList: React.FC = () => {
     );
   };
   return (
-    <List>
+    <List
+      showsHorizontalScrollIndicator={false}
+    >
       {data.map(item => {
         return (
           <CategoryItem

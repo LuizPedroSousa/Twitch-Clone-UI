@@ -1,7 +1,9 @@
 import styled from 'styled-components/native';
 import { shade } from 'polished';
+
+
 export const List = styled.ScrollView`
-    padding: 0 14px 0;
+
 `;
 
 export const ChannelsContainer = styled.TouchableOpacity`

@@ -4,10 +4,17 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Discover from './Pages/Discover/index';
 import Following from './Pages/Following/index';
 const { Navigator, Screen } = createBottomTabNavigator();
-import { Entypo, EvilIcons, AntDesign } from '@expo/vector-icons';
+import {
+    Entypo,
+    EvilIcons,
+    AntDesign,
+    MaterialCommunityIcons,
+    FontAwesome,
+    Octicons,
+
+} from '@expo/vector-icons';
 import { ThemeProvider } from 'styled-components/native';
 import { lighten, shade } from 'polished';
-import dark from './styles/themes/dark';
 import Search from './Pages/Search/index';
 import Esports from './Pages/Esports/index';
 import Transmit from './Pages/Transmit/index';
@@ -24,7 +31,7 @@ const Router: React.FunctionComponent = () => {
                                 tabBarOptions={{
                                     style: {
                                         height: 65,
-                                        backgroundColor: lighten(0.01, dark.colors.primary),
+                                        backgroundColor: lighten(0.01, theme.theme.colors.primary),
                                         fontSize: 22,
                                         fontFamily: 'roboto_500Medium',
                                         borderTopWidth: 0,
@@ -43,8 +50,8 @@ const Router: React.FunctionComponent = () => {
                                         fontSize: 12,
                                         paddingBottom: 12,
                                     },
-                                    inactiveTintColor: dark.colors.black,
-                                    activeTintColor: lighten(0.1, dark.colors.purple),
+                                    inactiveTintColor: theme.theme.colors.black,
+                                    activeTintColor: lighten(0.1, theme.theme.colors.purple),
                                 }}
                             >
                                 <Screen
@@ -53,17 +60,19 @@ const Router: React.FunctionComponent = () => {
                                     options={{
                                         tabBarIcon: ({ focused, size }) => {
                                             return (
-                                                <Entypo
-                                                    name="heart"
-                                                    size={size}
-                                                    color={
-                                                        focused
-                                                            ?
-                                                            shade(0.2, dark.colors.purple)
-                                                            :
-                                                            dark.colors.black
-                                                    }
-                                                />
+                                                focused
+                                                    ?
+                                                    <Entypo
+                                                        name="heart"
+                                                        size={size}
+                                                        color={shade(0.2, theme.theme.colors.purple)}
+                                                    />
+                                                    :
+                                                    <Entypo
+                                                        name='heart-outlined'
+                                                        size={size}
+                                                        color={theme.theme.colors.black}
+                                                    />
                                             );
                                         }
                                     }}
@@ -74,17 +83,19 @@ const Router: React.FunctionComponent = () => {
                                     options={{
                                         tabBarIcon: ({ focused, size }) => {
                                             return (
-                                                <Entypo
-                                                    name="compass"
-                                                    size={size}
-                                                    color={
-                                                        focused
-                                                            ?
-                                                            shade(0.2, dark.colors.purple)
-                                                            :
-                                                            dark.colors.black
-                                                    }
-                                                />
+                                                focused
+                                                    ?
+                                                    <MaterialCommunityIcons
+                                                        name="compass"
+                                                        size={size}
+                                                        color={shade(0.2, theme.theme.colors.purple)}
+                                                    />
+                                                    :
+                                                    <Entypo
+                                                        name="compass"
+                                                        size={size}
+                                                        color={theme.theme.colors.black}
+                                                    />
                                             );
                                         }
                                     }}
@@ -95,17 +106,19 @@ const Router: React.FunctionComponent = () => {
                                     options={{
                                         tabBarIcon: ({ focused, size }) => {
                                             return (
-                                                <AntDesign
-                                                    name="file1"
-                                                    size={size}
-                                                    color={
-                                                        focused
-                                                            ?
-                                                            shade(0.2, dark.colors.purple)
-                                                            :
-                                                            dark.colors.black
-                                                    }
-                                                />
+                                                focused
+                                                    ?
+                                                    <FontAwesome
+                                                        name='file'
+                                                        color={shade(0.2, theme.theme.colors.purple)}
+                                                        size={size}
+                                                    />
+                                                    :
+                                                    <AntDesign
+                                                        name="file1"
+                                                        size={size}
+                                                        color={theme.theme.colors.black}
+                                                    />
                                             );
                                         }
                                     }}
@@ -116,17 +129,19 @@ const Router: React.FunctionComponent = () => {
                                     options={{
                                         tabBarIcon: ({ focused, size }) => {
                                             return (
-                                                <EvilIcons
-                                                    name="trophy"
-                                                    size={size}
-                                                    color={
-                                                        focused
-                                                            ?
-                                                            shade(0.2, dark.colors.purple)
-                                                            :
-                                                            dark.colors.black
-                                                    }
-                                                />
+                                                focused
+                                                    ?
+                                                    <Entypo
+                                                        name='trophy'
+                                                        color={shade(0.2, theme.theme.colors.purple)}
+                                                        size={size}
+                                                    />
+                                                    :
+                                                    <EvilIcons
+                                                        name="trophy"
+                                                        size={size}
+                                                        color={theme.theme.colors.black}
+                                                    />
                                             );
                                         }
                                     }}
@@ -137,17 +152,19 @@ const Router: React.FunctionComponent = () => {
                                     options={{
                                         tabBarIcon: ({ focused, size }) => {
                                             return (
-                                                <Entypo
-                                                    name="rss"
-                                                    size={size}
-                                                    color={
-                                                        focused
-                                                            ?
-                                                            shade(0.2, dark.colors.purple)
-                                                            :
-                                                            dark.colors.black
-                                                    }
-                                                />
+                                                focused
+                                                    ?
+                                                    <Entypo
+                                                        name="rss"
+                                                        size={size}
+                                                        color={shade(0.2, theme.theme.colors.purple)}
+                                                    />
+                                                    :
+                                                    <Octicons
+                                                        name='rss'
+                                                        color={theme.theme.colors.black}
+                                                        size={size}
+                                                    />
                                             );
                                         }
                                     }}

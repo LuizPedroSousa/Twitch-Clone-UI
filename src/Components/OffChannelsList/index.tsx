@@ -40,7 +40,9 @@ const OffChannelsList: React.FC = () => {
     );
   }
   return (
-    <List>
+    <List
+      showsVerticalScrollIndicator={false}
+    >
       <ChannelsItem
         name='Felps'
         img={felpsIcon}
