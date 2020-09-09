@@ -1,19 +1,22 @@
 import React from 'react';
 import { View, Text, FlatList } from 'react-native';
-
-import { Wrapper, Main, Container } from './styles';
+import {
+  Wrapper,
+  Main,
+  Container,
+} from './styles';
 import Header from './../../Components/Header/index';
 import Heading from './../../Components/Heading/index';
 import Title from './../../Components/Title/index';
 import CategoryList from './../../Components/CategoryList/index';
 import StreamList from './../../Components/StreamList/index';
 import OffChannelsList from './../../Components/OffChannelsList';
+import categoriesFollowing from '../../Utils/categoriesFollowing';
 interface Item {
   key: string;
   render: () => JSX.Element;
   isTitle?: boolean;
 }
-
 const Following: React.FC = () => {
   const { data, indexes } = React.useMemo(() => {
     const Items: Item[] = [

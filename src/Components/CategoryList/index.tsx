@@ -1,40 +1,14 @@
 import React, { useContext } from 'react';
-import data from '../../Utils/categories';
-import { List } from './styles';
-import context from './../../styles/Utils/themeContext';
+import data from '../../Utils/categoriesFollowing';
 import {
-  Container,
-  CategoryImage,
-  CategoryTitle,
+  List,
   Status,
   RedCircle,
   Views,
 } from './styles';
-
-
-interface ItemProps {
-  item: typeof data[0];
-}
+import context from './../../styles/Utils/themeContext';
+import CategoryItem from '../CategoryItem';
 const CategoryList: React.FC = () => {
-  const { theme } = useContext(context);
-  const CategoryItem: React.FC<ItemProps> = ({ item }) => {
-    return (
-      <Container>
-        <CategoryImage resizeMode='contain' source={item.source} />
-        <CategoryTitle
-          numberOfLines={1}
-        >
-          {item.name}
-        </CategoryTitle>
-        <Status>
-          <RedCircle />
-          <Views >
-            {item.views}
-          </Views>
-        </Status>
-      </Container>
-    );
-  };
   return (
     <List
       showsHorizontalScrollIndicator={false}
@@ -44,7 +18,14 @@ const CategoryList: React.FC = () => {
           <CategoryItem
             key={item.name}
             item={item}
-          />
+          >
+            <Status key={item.name}>
+              <RedCircle />
+              <Views >
+                {item.views}
+              </Views>
+            </Status>
+          </CategoryItem>
         );
       })}
     </List>

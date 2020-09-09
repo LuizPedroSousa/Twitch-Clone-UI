@@ -6,7 +6,7 @@ export const Container = styled.View`
 
 export const TitleText = styled.Text`
     font-family: Roboto_400Regular;
-    font-size: 15px;
+    text-transform: uppercase;
     color: ${props =>
         props.theme.title = 'dark'
             ?

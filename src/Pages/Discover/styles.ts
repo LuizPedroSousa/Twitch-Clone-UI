@@ -18,6 +18,7 @@ export const Container = styled.View`
 `;
 
 export const Main = styled.View`
+    flex: 1;
 `;
 export const Heading = styled.Text`
     color: ${props => props.theme.colors.black};

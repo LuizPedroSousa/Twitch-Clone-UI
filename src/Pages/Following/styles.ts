@@ -1,11 +1,7 @@
 import styled from 'styled-components/native';
-
+import { shade } from 'polished';
 import { Platform } from 'react-native';
 import Constants from 'expo-constants';
-
-const statusBarHeight =
-    Platform.OS == 'android' ? Constants.statusBarHeight :
-        0;
 
 export const Wrapper = styled.SafeAreaView`
     flex: 1;
@@ -20,4 +16,3 @@ export const Container = styled.View`
 export const Main = styled.View`
     flex: 1;
 `;
-

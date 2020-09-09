@@ -54,13 +54,14 @@ export const Info = styled.Text`
 `;
 
 export const LanguageContainer = styled(InfoContainer)`
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-end;
     margin: 0 0 24px;
 `;
 export const Tag = styled.Text`
     margin: 0 2px;
     border-radius: 8px;
+    text-align: center;
     font-family: Roboto_400Regular;
     padding: 2px;
     color: ${props => props.theme.colors.black};

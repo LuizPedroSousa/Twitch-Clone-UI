@@ -26,7 +26,7 @@ interface ItemProps {
 }
 
 const StreamSeachList: React.FC = () => {
-  
+
   const { colors } = useContext(ThemeContext);
   const StreamContainerAnim = animatable.createAnimatableComponent(StreamItemContainer);
   const StreamItem: React.FC<ItemProps> = ({ item, index }) => {
