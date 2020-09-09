@@ -15,16 +15,20 @@ const Discover: React.FC = () => {
   const { data, indexes } = React.useMemo(() => {
     const Items: Item[] = [
       {
-        
+
         key: 'Page_Heading',
         render: () => <Heading >Descubra</Heading>
+      },
+      {
+        key: 'Carousel',
+        render: () => <StreamSeachList />
       },
       {
         key: 'Categories_Like',
         render: () => <Title >Categorias que achamos que você vai gostar</Title>,
         isTitle: true
       },
-      { key: 'C1', render: () => <StreamSeachList /> },
+      { key: 'C1', render: () => <View /> },
       {
         key: 'Channels_Like',
         render: () => <Title >Canais ao vivo que achamos que você vai gostar</Title>

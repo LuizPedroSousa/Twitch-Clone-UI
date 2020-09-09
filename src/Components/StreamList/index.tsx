@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import thumb from '../../Utils/streaming';
+import thumb from '../../Utils/streamFollowing';
 import {
   List,
   StreamContainer,

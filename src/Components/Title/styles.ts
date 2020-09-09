@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-
+import { lighten } from 'polished';
 export const Container = styled.View`
     padding: 0 0 14px;
 `;
@@ -7,6 +7,12 @@ export const Container = styled.View`
 export const TitleText = styled.Text`
     font-family: Roboto_400Regular;
     font-size: 15px;
-    color: ${props => props.theme.colors.gray};
+    color: ${props =>
+        props.theme.title = 'dark'
+            ?
+            lighten(0.5, props.theme.colors.primary)
+            :
+            props.theme.colors.black
+            };
     background-color: ${props => props.theme.colors.primary};    
 `;
