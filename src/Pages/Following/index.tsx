@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, FlatList } from 'react-native';
+import React, { useContext } from 'react';
+import { FlatList, Switch } from 'react-native';
 import {
   Wrapper,
   Main,
@@ -12,17 +12,25 @@ import CategoryList from './../../Components/CategoryList/index';
 import StreamList from './../../Components/StreamList/index';
 import OffChannelsList from './../../Components/OffChannelsList';
 import categoriesFollowing from '../../Utils/categoriesFollowing';
+import context from './../../styles/themes/themeContext';
 interface Item {
   key: string;
   render: () => JSX.Element;
   isTitle?: boolean;
 }
 const Following: React.FC = () => {
+  const { setTheme } = useContext(context);
   const { data, indexes } = React.useMemo(() => {
     const Items: Item[] = [
       {
         key: 'Page_heading',
         render: () => <Heading>Seguindo</Heading>
+      },
+      {
+        key: 'Switch',
+        render: () => <Switch
+          onValueChange={setTheme}
+        />
       },
       {
         key: 'Followed_category',

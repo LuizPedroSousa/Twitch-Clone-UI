@@ -6,7 +6,7 @@ import {
   RedCircle,
   Views,
 } from './styles';
-import context from './../../styles/Utils/themeContext';
+import context from '../../styles/themes/themeContext';
 import CategoryItem from '../CategoryItem';
 const CategoryList: React.FC = () => {
   return (

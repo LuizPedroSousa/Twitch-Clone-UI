@@ -7,7 +7,7 @@ const Title: React.FC = ({ children }) => {
   const ContainerAnim = animatable.createAnimatableComponent(Container);
   return (
     <ContainerAnim
-      useNativeDriver
+      useNativeDriver={true}
       animation='bounceInLeft'
       duration={2000}
     >

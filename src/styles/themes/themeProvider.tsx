@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import Context from './themeContext';
-import light from '../themes/light';
-import dark from '../themes/dark';
+import dark from './dark';
+import light from './light';
 const ThemeChangeProvider: React.FunctionComponent = ({ children }) => {
 
     const [theme, setTheme] = useState(dark);
     const toggleChangeTheme = () => {
-        setTheme(theme.title == 'dark' ? light : dark);
+        setTheme(theme.title == 'light' ? dark : light);
     }
     return (
         <Context.Provider
             value={{
                 theme: theme,
-                setTheme: toggleChangeTheme,
+                setTheme: toggleChangeTheme
             }}
         >
             {children}

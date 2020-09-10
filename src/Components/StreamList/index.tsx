@@ -29,7 +29,7 @@ const StreamList: React.FC = () => {
       .createAnimatableComponent(StreamContainer);
     return (
       <StreamContainerAnim
-        useNativeDriver
+        useNativeDriver={true}
         animation='zoomIn'
         duration={3500}
       >

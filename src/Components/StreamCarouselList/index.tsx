@@ -32,7 +32,7 @@ const StreamCarouselList: React.FC = () => {
   const StreamItem: React.FC<ItemProps> = ({ item, index }) => {
     return (
       <StreamContainerAnim
-        useNativeDriver
+        useNativeDriver={true}
         animation='bounceInRight'
         duration={3000}
       >

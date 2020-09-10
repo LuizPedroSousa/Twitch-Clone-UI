@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @google-fonts/poppins expo-font@~8.2.1
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-paper @types/react-native-paper -D
 
 PATH: 
   C:\Users\luizp\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\luizp\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27;C:\Python27\Scripts;C:\Python38\Scripts;C:\Python38;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\MongoDB\Server\4.4\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Users\luizp\AppData\Local\Microsoft\WindowsApps;C:\Users\luizp\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\luizp\AppData\Roaming\npm;C:\Users\luizp\AppData\Local\Yarn\bin;C:\Users\luizp\~ \ .npm-global;C:\Users\luizp\~ \ .yarn-global\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@google-fonts%2fpoppins: Not found
+  Error: https://registry.yarnpkg.com/@types%2freact-native-paper: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66097:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140749:22)
       at Request.emit (events.js:315:20)
@@ -37,13 +37,14 @@ npm manifest:
       "eject": "expo eject"
     },
     "dependencies": {
+      "@expo-google-fonts/poppins": "^0.1.0",
       "@expo-google-fonts/roboto": "^0.1.0",
       "@react-native-community/masked-view": "0.1.10",
       "@react-navigation/bottom-tabs": "^5.8.0",
       "@react-navigation/native": "^5.7.3",
       "@types/react-native-snap-carousel": "^3.8.2",
       "expo": "~38.0.8",
-      "expo-font": "^8.2.2",
+      "expo-font": "~8.2.1",
       "expo-status-bar": "^1.0.2",
       "polished": "^3.6.6",
       "react": "~16.11.0",
@@ -1085,6 +1086,11 @@ Lockfile:
     version "0.7.5"
     resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
     integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
+  
+  "@expo-google-fonts/poppins@^0.1.0":
+    version "0.1.0"
+    resolved "https://registry.yarnpkg.com/@expo-google-fonts/poppins/-/poppins-0.1.0.tgz#aae4df9e80d68ec9dc6764e57dc931f1f64016cd"
+    integrity sha512-iC8ii7hYyK22N3ivvLyIspLQ0D4dn1mB+llhYnUCr/h/QfwUWyEosq1uWiwNC47yCedsiPiZ99vJSfpYRjBDrA==
   
   "@expo-google-fonts/roboto@^0.1.0":
     version "0.1.0"
@@ -2657,7 +2663,7 @@ Lockfile:
     dependencies:
       uuid "^3.4.0"
   
-  expo-font@^8.2.2, expo-font@~8.2.1:
+  expo-font@~8.2.1:
     version "8.2.2"
     resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-8.2.2.tgz#c67ee8d3841921a907464d67e8098baeed92bacf"
     integrity sha512-p/a7Ve+3LiR9ofn77U0UuuE6ZQiLVu3M1btiKUDe5efAp48D9GG41AevKQ7YnkfxTDdGJa0ACAtJAVsAD30jGA==
