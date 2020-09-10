@@ -3,6 +3,7 @@ import { lighten } from 'polished';
 export const Container = styled.View`
     padding: 0 14px 0;
     align-items: center;
+    flex: 1;
 `;
 
 export const StreamItemContainer = styled.View`

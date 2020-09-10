@@ -3,10 +3,8 @@ import { lighten } from 'polished';
 export const List = styled.ScrollView.attrs({
     horizontal: true,
 })`
-    padding: 14px 0 22px;
+    padding: 14px 0 14px;
 `;
-
-
 
 export const Especs = styled.Text`
     color: ${props =>

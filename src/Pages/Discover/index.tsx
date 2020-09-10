@@ -5,10 +5,9 @@ import { Wrapper, Container, Main } from './styles';
 import Header from '../../Components/Header/index';
 import Heading from './../../Components/Heading/index';
 import Title from './../../Components/Title/index';
-import StreamSeachList from './../../Components/StreamSeachList/index';
-import CategoryList from './../../Components/CategoryList/index';
-import categoriesSearch from '../../Utils/categoriesSearch';
+import StreamCarouselList from '../../Components/StreamCarouselList/index';
 import CategorySearchList from '../../Components/CategorySearchList';
+import StreamSearchList from '../../Components/StreamSearchList/index';
 interface Item {
   key: string;
   render: () => JSX.Element;
@@ -24,19 +23,19 @@ const Discover: React.FC = () => {
       },
       {
         key: 'Carousel',
-        render: () => <StreamSeachList />
+        render: () => <StreamCarouselList />
       },
       {
         key: 'Categories_Like',
         render: () => <Title >Categorias que achamos que você vai gostar</Title>,
         isTitle: true
       },
-      { key: 'C1', render: () => <CategorySearchList/> },
+      { key: 'C1', render: () => <CategorySearchList /> },
       {
         key: 'Channels_Like',
         render: () => <Title >Canais ao vivo que achamos que você vai gostar</Title>
       },
-      { key: 'C2', render: () => <View /> },
+      { key: 'C2', render: () => <StreamSearchList /> },
     ];
 
     const indexes: number[] = [];
@@ -57,11 +56,9 @@ const Discover: React.FC = () => {
             renderItem={({ item }) => item.render()}
             keyExtractor={(item) => item.key}
             stickyHeaderIndices={indexes}
-
             onRefresh={() => { }}
             refreshing={false}
           >
-
           </FlatList>
         </Main>
       </Container>

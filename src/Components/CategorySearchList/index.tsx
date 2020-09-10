@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Tag } from '../StreamSeachList/styles';
+import { Tag } from '../StreamCarouselList/styles';
 import {
   List,
   Especs,

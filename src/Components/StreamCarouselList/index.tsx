@@ -16,7 +16,7 @@ import {
 
 
 import Carousel from 'react-native-snap-carousel';
-import streamSearch from '../../Utils/streamSearch';
+import streamSearch from '../../Utils/streamCarousel';
 
 import * as animatable from 'react-native-animatable';
 
@@ -25,7 +25,7 @@ interface ItemProps {
   index: number;
 }
 
-const StreamSeachList: React.FC = () => {
+const StreamCarouselList: React.FC = () => {
 
   const { colors } = useContext(ThemeContext);
   const StreamContainerAnim = animatable.createAnimatableComponent(StreamItemContainer);
@@ -108,4 +108,4 @@ const StreamSeachList: React.FC = () => {
   );
 };
 
-export default StreamSeachList;
+export default StreamCarouselList;
